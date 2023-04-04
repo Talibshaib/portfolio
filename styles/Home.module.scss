@@ -1,0 +1,58 @@
+@import "./mixins";
+
+.herosection{
+    padding: 1rem;
+    min-height: 100vh;
+    min-height: 100dvh;
+    @include flexBox();
+}
+
+.infopart{
+    width: min(35rem , 100%);
+    h1{
+        margin: -0.5rem;
+        font-weight: bold;
+        text-transform: capitalize;
+        font-size: 5rem;
+        line-height: 5rem;
+    }
+    p{
+        margin: 1rem 0.5rem;
+        font-weight: 500;
+    }
+}
+
+
+.img{
+    padding:2rem 1rem;
+    width: min(25rem , 100%);
+    img{
+        width: 100%;
+        margin: auto;
+        border-radius: 0.5rem;
+        border-radius: 50%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+    }
+}
+.socail_icon{
+    @include flexBox(row , flex-start , center , 1rem);
+    a{
+        text-decoration: none;
+        color: inherit;
+    }
+    svg{
+        width: 2rem;
+        height: 2rem;
+    }
+}
+.downlaodbtn{
+    border: 1px solid #eee;
+    @include primarybtn();
+    margin: 1rem 0rem;
+}
+@media (max-width:750px) {
+    .herosection{
+        flex-direction: column-reverse;
+    }
+}
